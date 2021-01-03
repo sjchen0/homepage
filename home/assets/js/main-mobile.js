@@ -1,14 +1,5 @@
-var mobileDevice = true;
-
 jQuery(window).on('load', function() {
     "use strict";
-    if(/(Android|webOS|iPhone|iPad|iPod|BlackBerry)/i.test(navigator.userAgent)) {
-        // alert("You are using mobile devices.");
-    }else{
-        alert("You are using desktop devices.");
-        mobileDevice = false;
-        document.getElementById('css-main').href = "assets/css/main.css";
-    }
 
     // HIDE PRELOADER
     $(".preloader").addClass("hide-preloader");   
@@ -26,6 +17,16 @@ jQuery(window).on('load', function() {
 
 jQuery(document).ready(function($) {
 	"use strict";
+    var mobileDevice = true;
+
+    if(/(Android|webOS|iPhone|iPad|iPod|BlackBerry)/i.test(navigator.userAgent)) {
+        // alert("You are using mobile devices.");
+    }else{
+        // alert("You are using desktop devices.");
+        mobileDevice = false;
+        document.getElementById('css-main').href = "assets/css/main.css";
+    }
+
     // SMOOTH SCROLL FOR SAME PAGE LINKS
     $(document).on('click', 'a.smooth-scroll', function(event) {   
         event.preventDefault();
@@ -48,7 +49,8 @@ jQuery(document).ready(function($) {
     });
     
     // SIMULATE HOVER ON TOUCHSCREEN
-    if(!mobileDevice){
+    // alert(mobileDevice);
+    if(mobileDevice){
         setInterval(function(){
             var upper_bound = 0.7 * $(window).height();
             var lower_bound = 0.0 * $(window).height();
@@ -187,5 +189,5 @@ jQuery(document).ready(function($) {
                 }
             }
         });
-    });   
+    });
 });
