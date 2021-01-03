@@ -232,6 +232,7 @@ a:hover
 
     width: 0%;
     height: 100%;
+    display: none;
 }
 
 .image-container .background-img
@@ -251,6 +252,7 @@ a:hover
     background: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: none;
 }
 
 @media (max-width:1200px)
