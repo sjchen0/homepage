@@ -112,7 +112,7 @@ $$
 
 ***
 
-##### Sec 7.4-5: Equipartition theorem; Internal energy and heat capacity of ideal gas
+##### Sec 7.4-5: Equipartition theorem; Energy and capacity of ideal gas
 
 equipartition theorem: 对于处在温度为 $T$ 的平衡状态的**经典**系统，粒子能量中每一个平方项的平均值为 $kT/2$。
 
@@ -141,4 +141,22 @@ $$
 \varepsilon_q=\frac{1}{2}\sum_{i=1}^rb_iq_i^2.
 $$
 我们可以对称地导出势能项的equipartition。
+
+利用equipartition theorem可以算出气体的内能、热容。
+
+当然，也可以用**配分函数**去算。以双原子分子为例。双原子分子的能量可以表示成平动能、振动能、转动能之和：$\varepsilon=\varepsilon^\text{t}+\varepsilon^\text{v}+\varepsilon^\text{r}$。
+
+配分函数是
+$$
+Z=\sum_i\omega_ie^{-\beta\varepsilon_i}=\sum_{\text{t,v,r}}\omega^\text{t}\omega^\text{v}\omega^\text{r}e^{-\beta(\varepsilon^\text{t}+\varepsilon^\text{v}+\varepsilon^\text{r})}.
+$$
+注意这样拆分简并度是正确的，因为我们有
+$$
+\omega_i=\sum_{\text{t,v,r: }\varepsilon_i=\varepsilon^\text{t}+\varepsilon^\text{v}+\varepsilon^\text{r}}\omega^\text{t}\omega^\text{v}\omega^\text{r}.
+$$
+然后，配分函数可以写成
+$$
+Z=\sum_i\omega^{\text{t}}e^{-\beta\varepsilon^{\text{t}}}\cdot\sum_i\omega^{\text{v}}e^{-\beta\varepsilon^{\text{v}}}\cdot\sum_i\omega^{\text{r}}e^{-\beta\varepsilon^{\text{r}}}=Z^\text{t}Z^\text{v}Z^\text{r}.
+$$
+我们可以利用三种能级的**经典**/**量子**表达式算出各自的配分函数。量子结果解释了一些经典统计出现的问题。太过practical，这里不赘述。
 
