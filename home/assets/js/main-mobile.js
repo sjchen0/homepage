@@ -59,107 +59,60 @@ jQuery(document).ready(function($) {
             var upper_bound = 0.7 * $(window).height();
             var lower_bound = 0.0 * $(window).height();
 
-            var info = $("#research .showcase .item .info");
-            var info_h5 = $("#research .showcase .item .info .container-mid h5");
-            var info_p = $("#research .showcase .item .info .container-mid p");
-            var view_offset = info.offset().top - $(window).scrollTop();
-
-            // GO TO HOVER
-            if(view_offset > lower_bound && view_offset < upper_bound) {
-                info.css({"width": "100%"});
-                info_h5.css({
-                    "-webkit-transition": ".2s ease .2s",
-                    "-o-transition":      ".2s ease .2s",
-                    "transition":         ".2s ease .2s",
-                    "-webkit-transform":  "translateX(0)",
-                    "-ms-transform":      "translateX(0)",
-                    "transform":          "translateX(0)",
-                    "opacity":            "1"
-                });
-                info_p.css({
-                    "-webkit-transition": ".2s ease .3s",
-                    "-o-transition":      ".2s ease .3s",
-                    "transition":         ".2s ease .3s",
-                    "-webkit-transform":  "translateX(0)",
-                    "-ms-transform":      "translateX(0)",
-                    "transform":          "translateX(0)",
-                    "opacity":            "1"
-                });
+            var infos = [$("#research .showcase .item .info"), $("#thermo-info"), $("#ode-info")];
+            var info_h5s = [$("#research .showcase .item .info .container-mid h5"), $("#thermo-info .container-mid h5"), $("#ode-info .container-mid h5")];
+            var info_ps = [$("#research .showcase .item .info .container-mid p"), $("#thermo-info .container-mid p"), $("#ode-info .container-mid p")];
+            var i = 0;
+            for(i = 0; i < infos.length; i++){
+                var info = infos[i];
+                var info_h5 = info_h5s[i];
+                var info_p = info_ps[i];
+                var view_offset = info.offset().top - $(window).scrollTop();
+                // GO TO HOVER
+                if(view_offset > lower_bound && view_offset < upper_bound) {
+                    info.css({"width": "100%"});
+                    info_h5.css({
+                        "-webkit-transition": ".2s ease .2s",
+                        "-o-transition":      ".2s ease .2s",
+                        "transition":         ".2s ease .2s",
+                        "-webkit-transform":  "translateX(0)",
+                        "-ms-transform":      "translateX(0)",
+                        "transform":          "translateX(0)",
+                        "opacity":            "1"
+                    });
+                    info_p.css({
+                        "-webkit-transition": ".2s ease .3s",
+                        "-o-transition":      ".2s ease .3s",
+                        "transition":         ".2s ease .3s",
+                        "-webkit-transform":  "translateX(0)",
+                        "-ms-transform":      "translateX(0)",
+                        "transform":          "translateX(0)",
+                        "opacity":            "1"
+                    });
+                }
+                // GO FROM HOVER
+                else {
+                    info.css({"width": "0%"});
+                    info_h5.css({
+                        "-webkit-transition": "",
+                        "-o-transition":      "",
+                        "transition":         "",
+                        "-webkit-transform":  "translateX(4vh)",
+                        "-ms-transform":      "translateX(4vh)",
+                        "transform":          "translateX(4vh)",
+                        "opacity":            "0"
+                    });
+                    info_p.css({
+                        "-webkit-transition": "",
+                        "-o-transition":      "",
+                        "transition":         "",
+                        "-webkit-transform":  "translateX(4vh)",
+                        "-ms-transform":      "translateX(4vh)",
+                        "transform":          "translateX(4vh)",
+                        "opacity":            "0"
+                    });
+                }
             }
-            // GO FROM HOVER
-            else {
-                info.css({"width": "0%"});
-                info_h5.css({
-                    "-webkit-transition": "",
-                    "-o-transition":      "",
-                    "transition":         "",
-                    "-webkit-transform":  "translateX(4vh)",
-                    "-ms-transform":      "translateX(4vh)",
-                    "transform":          "translateX(4vh)",
-                    "opacity":            "0"
-                });
-                info_p.css({
-                    "-webkit-transition": "",
-                    "-o-transition":      "",
-                    "transition":         "",
-                    "-webkit-transform":  "translateX(4vh)",
-                    "-ms-transform":      "translateX(4vh)",
-                    "transform":          "translateX(4vh)",
-                    "opacity":            "0"
-                });
-            }
-
-            var notes_info = $("#notes .showcase .item .info");
-            var notes_info_h5 = $("#notes .showcase .item .info .container-mid h5");
-            var notes_info_p = $("#notes .showcase .item .info .container-mid p");
-            var notes_view_offset = notes_info.offset().top - $(window).scrollTop();
-            
-            // GO TO HOVER
-            if(notes_view_offset > lower_bound && notes_view_offset < upper_bound) {
-                notes_info.css({"width": "100%"});
-                notes_info_h5.css({
-                    "-webkit-transition": ".2s ease .2s",
-                    "-o-transition":      ".2s ease .2s",
-                    "transition":         ".2s ease .2s",
-                    "-webkit-transform":  "translateX(0)",
-                    "-ms-transform":      "translateX(0)",
-                    "transform":          "translateX(0)",
-                    "opacity":            "1"
-                });
-                notes_info_p.css({
-                    "-webkit-transition": ".2s ease .3s",
-                    "-o-transition":      ".2s ease .3s",
-                    "transition":         ".2s ease .3s",
-                    "-webkit-transform":  "translateX(0)",
-                    "-ms-transform":      "translateX(0)",
-                    "transform":          "translateX(0)",
-                    "opacity":            "1"
-                });
-            }
-            // GO FROM HOVER
-            else {
-                notes_info.css({"width": "0%"});
-                notes_info_h5.css({
-                    "-webkit-transition": "",
-                    "-o-transition":      "",
-                    "transition":         "",
-                    "-webkit-transform":  "translateX(4vh)",
-                    "-ms-transform":      "translateX(4vh)",
-                    "transform":          "translateX(4vh)",
-                    "opacity":            "0"
-                });
-                notes_info_p.css({
-                    "-webkit-transition": "",
-                    "-o-transition":      "",
-                    "transition":         "",
-                    "-webkit-transform":  "translateX(4vh)",
-                    "-ms-transform":      "translateX(4vh)",
-                    "transform":          "translateX(4vh)",
-                    "opacity":            "0"
-                });
-            }
-
-
         }, 100);
     }
 
