@@ -27,6 +27,10 @@ jQuery(document).ready(function($) {
         document.getElementById('css-main').href = "assets/css/main.css";
     }
 
+    // ADJUST OPACITY FOR BRIGHT SHOWCASES
+    var showcase_item = $("#ode-info");
+    showcase_item.css({"background": "rgba(0,0,0,0.35)"});
+
     // SMOOTH SCROLL FOR SAME PAGE LINKS
     $(document).on('click', 'a.smooth-scroll', function(event) {   
         event.preventDefault();
