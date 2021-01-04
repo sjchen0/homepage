@@ -22,6 +22,6 @@ opennotes
     └── thermonotes_8.md
 ```
 
-## Together we fight against 996 work schedule
+## Together we fight against 996 working schedule
 
 We hold these truths to be self-evident, that the life of developers matter, and that any working schedule breaching the Labor Law shall be legally sanctioned. [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
