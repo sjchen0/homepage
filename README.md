@@ -13,13 +13,14 @@ Current notes tree:
 
 ```
 opennotes
-└── thermodynamics
-    ├── thermonotes_5-6.html
-    ├── thermonotes_5-6.md
-    ├── thermonotes_7.html
-    ├── thermonotes_7.md
-    ├── thermonotes_8.html
-    └── thermonotes_8.md
+├── thermodynamics
+│   ├── thermonotes_5-6.html
+│   ├── thermonotes_5-6.md
+│   ├── thermonotes_7.html
+│   ├── thermonotes_7.md
+│   ├── thermonotes_8.html
+│   └── thermonotes_8.md
+└── ode
 ```
 
 ## Together we fight against 996 working schedule
