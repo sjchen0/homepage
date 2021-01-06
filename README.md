@@ -7,7 +7,7 @@ This webpage is touchscreen-friendly without inhibiting the experiences of a des
 
 ## opennotes
 
-If deemed appropriate for public access and convenience of personal review, some of my notes will be uploaded to the server. Subject to copyright concerns, however, NO notes taken in lectures offered exclusively by CUHK will be available here. The literature of these notes can incorporate multiple languages, say English and Chinese. 
+I will upload some of my notes to the server linked from my homepage. 
 
 Current notes tree:
 
