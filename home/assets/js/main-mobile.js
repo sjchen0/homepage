@@ -30,6 +30,8 @@ jQuery(document).ready(function($) {
     // ADJUST OPACITY FOR BRIGHT SHOWCASES
     var showcase_item = $("#ode-info");
     showcase_item.css({"background": "rgba(0,0,0,0.35)"});
+    showcase_item = $("#prob-info");
+    showcase_item.css({"background": "rgba(0,0,0,0.40)"});
 
     // SMOOTH SCROLL FOR SAME PAGE LINKS
     $(document).on('click', 'a.smooth-scroll', function(event) {   
@@ -59,9 +61,24 @@ jQuery(document).ready(function($) {
             var upper_bound = 0.7 * $(window).height();
             var lower_bound = 0.0 * $(window).height();
 
-            var infos = [$("#research .showcase .item .info"), $("#thermo-info"), $("#ode-info")];
-            var info_h5s = [$("#research .showcase .item .info .container-mid h5"), $("#thermo-info .container-mid h5"), $("#ode-info .container-mid h5")];
-            var info_ps = [$("#research .showcase .item .info .container-mid p"), $("#thermo-info .container-mid p"), $("#ode-info .container-mid p")];
+            var infos = [
+                $("#research .showcase .item .info"), 
+                $("#thermo-info"), 
+                $("#ode-info"), 
+                $("#prob-info")
+            ];
+            var info_h5s = [
+                $("#research .showcase .item .info .container-mid h5"), 
+                $("#thermo-info .container-mid h5"), 
+                $("#ode-info .container-mid h5"),
+                $("#prob-info .container-mid h5")
+            ];
+            var info_ps = [
+                $("#research .showcase .item .info .container-mid p"), 
+                $("#thermo-info .container-mid p"), 
+                $("#ode-info .container-mid p"),
+                $("#prob-info .container-mid p")
+            ];
             var i = 0;
             for(i = 0; i < infos.length; i++){
                 var info = infos[i];
